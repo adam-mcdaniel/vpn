@@ -28,9 +28,9 @@ First, start the VPN server and setup the TUN interface for it to communicate ov
 
 ```bash
 $ sudo ./vpnserver
-$ sudo ifconfig tun0 192.168.53.1/24 up # Run in another window while the server is running
-$ # The following will route packets from the TUN interface to the normal network interface
-$ # (if the entry is not already automatically added)
+$ sudo ifconfig tun0 192.168.53.1/24 up # Run in another window while server is running
+$ # The following will route packets from the TUN interface to the
+$ # normal network interface (if the entry is not already automatically added)
 $ sudo route add -net 192.168.53.0/24 eth0
 ```
 
@@ -46,9 +46,9 @@ Now that the server is running, start the VPN client:
 
 ```bash
 $ sudo ./vpnclient 10.0.2.8 # Replace with the server's IP address
-$ sudo ifconfig tun0 192.168.53.5/24 up # Run in another window while the client is running
-$ # The following will route packets from the TUN interface to the normal network interface
-$ # (if the entry is not already automatically added)
+$ sudo ifconfig tun0 192.168.53.5/24 up # Run in another window while client is running
+$ # The following will route packets from the TUN interface to the
+$ # normal network interface (if the entry is not already automatically added)
 $ sudo route add -net 192.168.53.0/24 eth0
 ```
 
