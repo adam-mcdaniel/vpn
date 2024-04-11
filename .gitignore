@@ -5,3 +5,4 @@ vpnclient
 localhost.crt
 localhost.key
 login
+.DS_Store
